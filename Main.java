@@ -1,16 +1,18 @@
-import java.math.BigInteger;
-
 public class Main {
     public static void main(String[] args) {
-        int count = 1;
-        BigInteger powerOfTwo = BigInteger.valueOf(1);
-        BigInteger result;
-        while(count <= 64)
-        {
-            System.out.println("Square number " + count + " has " + powerOfTwo + " grains of wheat");
-            result = powerOfTwo.multiply(BigInteger.valueOf(2));
-            powerOfTwo = result;
-            count++;
+        Rodent[] rodents = new Rodent[5];
+        rodents[0] = new Rodent("brown",4, "Rodent");
+        rodents[1] = new Mouse("black and white",7);
+        rodents[2] = new Squirrel("red",3);
+        rodents[3] = new Hamster("gray",6);
+        rodents[4] = new Squirrel("brown",3);
+
+        for (Rodent rodent : rodents) {
+            rodent.getName();
+            rodent.getDetails();
+            rodent.getFood();
+            rodent.getActivity();
+            System.out.println();
         }
     }
 }
