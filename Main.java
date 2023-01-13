@@ -1,16 +1,22 @@
-import java.math.BigInteger;
-
 public class Main {
     public static void main(String[] args) {
-        int count = 1;
-        BigInteger powerOfTwo = BigInteger.valueOf(1);
-        BigInteger result;
-        while(count <= 64)
-        {
-            System.out.println("Square number " + count + " has " + powerOfTwo + " grains of wheat");
-            result = powerOfTwo.multiply(BigInteger.valueOf(2));
-            powerOfTwo = result;
-            count++;
-        }
+
+        Insect i1 = new Beetle();
+        i1.makeSound();
+
+        System.out.println();
+
+        Insect i2 = new KitchenInsect();
+        i2.makeSound();
+
+        System.out.println();
+
+        Insect i12 = new SpringBeetle();
+        i12.makeSound();
+
+        System.out.println();
+
+        Insect i22 = new BigKitchenInsect();
+        i22.makeSound();
     }
 }
